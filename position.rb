@@ -12,14 +12,12 @@ class Position
   end
 
   def move(direction)
-    byebug
     case direction
     when 'NORTH'
       move_north
     when 'SOUTH'
       move_south
     when 'WEST'
-      byebug
       move_west
     when 'EAST'
       move_east
@@ -55,7 +53,6 @@ class Position
   end
 
   def move_west
-    byebug
     Position.new(@x_position - 1, @y_position, @direction)
   end
 
