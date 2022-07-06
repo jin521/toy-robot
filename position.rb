@@ -11,7 +11,7 @@ class Position
     @direction = direction
   end
 
-  def move(direction)
+  def move
     case direction
     when 'NORTH'
       move_north

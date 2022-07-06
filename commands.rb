@@ -15,7 +15,8 @@ loop do
 
   input = gets.chomp
 
-  commander.interprete(input)
+  command = commander.interprete(input)
+  command&.execute
 
   break if input =~ /exit/i
 end

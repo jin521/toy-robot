@@ -1,3 +1,9 @@
+require './commands/place_command'
+require './commands/move_command'
+require './commands/left_command'
+require './commands/right_command'
+require './commands/report_command'
+
 class Commander
   def initialize(robot, table)
     @robot = robot
@@ -9,21 +15,17 @@ class Commander
       x = command.split(',')[0].split(' ')[1].to_i
       y = command.split(',')[1].to_i
       direction = command.split(',')[2].strip
-
+  
       curent_location = Position.new(x, y, direction)
-      @robot.current_location = curent_location if @table.position_valid?(curent_location)
+      PlaceCommand.new(@robot, @table, curent_location)
     elsif command.split.include?('MOVE')
-      new_location = @robot.current_location.move(@robot.current_location.direction)
-      @robot.current_location = new_location if @table.position_valid?(new_location)
+      MoveCommand.new(@robot, @table)
     elsif command.split.include?('LEFT')
-      @robot.current_location = @robot.current_location.rotate_left
+      LeftCommand.new(@robot)
     elsif command.split.include?('RIGHT')
-      @robot.current_location = Postion.new(@robot.current_location.x_position, @robot.current_location.y_position,
-                                            @robot.current_location.direction_right)
+      RightCommand.new(@robot)
     elsif command.split.include?('REPORT')
-      puts @robot.report_current_location
-    else
-      puts 'ERROR: command invalid'
+      ReportCommand.new(@robot)
     end
   end
 end
