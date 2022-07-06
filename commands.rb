@@ -24,19 +24,12 @@ if input_array.length > 1
   puts args[2]
 end
 
-# if command == "PLACE"
-#   position = Position.new(args[0],args[1], args[2])
-#   robot = Robot.new
-#   robot.current_location = position
-#   puts robot.report_current_location
-# end
-
 loop do
   puts "type your command (one command at a time, enter EXIT to quit the game)"
 
   input = gets.chomp
 
-  commander.interpret(input)
+  commander.interprete(input)
 
   break if input =~ /exit/i
 end

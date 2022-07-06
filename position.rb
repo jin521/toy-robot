@@ -1,6 +1,8 @@
 class Position
   attr_reader :x_position, :y_position, :direction
 
+  DIRECTIONS = ['NORTH', 'EAST', 'SOUTH', 'WEST'].freeze
+
   def initialize(x_position, y_position, direction)
     @x_position = x_position
     @y_position = y_position
@@ -22,10 +24,26 @@ class Position
     end
   end
 
+  def rotate_left
+    # rotate the robot 90 degrees in LEFT
+    current_index = DIRECTIONS.find_index(direction)
+    index_after_rotate = current_index - 1
+    new_direction = DIRECTIONS[index_after_rotate]
+    Position.new(@x_position, @y_position, new_direction)
+  end
+
+  def rotate_right
+    # rotate the robot 90 degrees in RIGHT
+    current_index = DIRECTIONS.find_index(direction)
+    index_after_rotate = current_index + 1
+    new_direction = DIRECTIONS[index_after_rotate]
+    Position.new(@x_position, @y_position, new_direction)
+  end
+
   private
 
   def move_north
-    Position.new(@x_position, @y_position + 1, @direction)
+    Posiition.new(@x_position, @y_position + 1, @direction)
   end
 
   def move_south

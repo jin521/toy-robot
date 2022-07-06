@@ -4,7 +4,7 @@ class Commander
     @table = table
   end
 
-  def interpret(command)
+  def interprete(command)
     case 
     when command.split.include?('PLACE')
       x = command.split(',')[0].split(' ')[1].to_i
@@ -17,7 +17,7 @@ class Commander
       new_location = @robot.current_location.move(@robot.current_location.direction)
       @robot.current_location = new_location
     when command.split.include?('LEFT')
-      @robot.current_location = Postion.new(@robot.current_location.x_position, @robot.current_location.y_position, @robot.current_location.direction_left)
+      @robot.current_location = @robot.current_location.rotate_left
     when command.split.include?('RIGHT')
       @robot.current_location = Postion.new(@robot.current_location.x_position, @robot.current_location.y_position, @robot.current_location.direction_right)
     when command.split.include?('REPORT')
