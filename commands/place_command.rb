@@ -6,7 +6,6 @@ class PlaceCommand
   end
 
   def execute
-    byebug
     @robot.current_location = @position if @table.position_valid?(@position)
   end
 end

@@ -4,18 +4,18 @@ require 'byebug'
 require 'table'
 require 'robot'
 require 'position'
-require 'commander'
+require 'invoker'
 
 table = Table.new
 robot = Robot.new
-commander = Commander.new(robot, table)
+invoker = Invoker.new(robot, table)
 
 loop do
   puts 'type your command (one command at a time, enter EXIT to quit the game)'
 
   input = gets.chomp
 
-  command = commander.interprete(input)
+  command = invoker.interprete(input)
   command&.execute
 
   break if input =~ /exit/i

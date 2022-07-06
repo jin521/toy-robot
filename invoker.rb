@@ -4,7 +4,7 @@ require './commands/left_command'
 require './commands/right_command'
 require './commands/report_command'
 
-class Commander
+class Invoker
   def initialize(robot, table)
     @robot = robot
     @table = table
