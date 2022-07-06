@@ -6,7 +6,7 @@ class Table
     @width = width
   end
 
-  def position_valid?(postion)
-    (postion.x_postion < @length && postion.x_postion >= 0) && (postion.y_postion < @width && postion.y_postion >= 0)
+  def position_valid?(position)
+    (position.x_position < @length && position.x_position >= 0) && (position.y_position < @width && position.y_position >= 0)
   end
 end
