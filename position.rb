@@ -37,12 +37,12 @@ class Position
   def rotate_right
     # rotate the robot 90 degrees in RIGHT
     current_index = DIRECTIONS.find_index(direction)
-    if current_index == DIRECTIONS.length - 1
-      index_after_rotate = 0
-    else
-      index_after_rotate = current_index + 1
-    end
-      
+    index_after_rotate = if current_index == DIRECTIONS.length - 1
+                           0
+                         else
+                           current_index + 1
+                         end
+
     new_direction = DIRECTIONS[index_after_rotate]
     Position.new(@x_position, @y_position, new_direction)
   end

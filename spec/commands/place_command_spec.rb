@@ -10,7 +10,7 @@ describe PlaceCommand do
   describe '#execute' do
     let(:robot) { Robot.new }
     let(:table) { Table.new }
-    
+
     context 'when position is valid' do
       let(:position) { Position.new(0, 0, 'NORTH') }
       it 'places the robot' do

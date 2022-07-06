@@ -1,5 +1,5 @@
 class PlaceCommand
-  def initialize(robot=nil, table=nil, position=nil)
+  def initialize(robot = nil, table = nil, position = nil)
     @robot = robot
     @table = table
     @position = position

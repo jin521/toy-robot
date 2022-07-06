@@ -1,5 +1,5 @@
 class LeftCommand
-  def initialize(robot=nil)
+  def initialize(robot = nil)
     @robot = robot
   end
 

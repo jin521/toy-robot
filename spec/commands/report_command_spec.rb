@@ -12,8 +12,8 @@ describe ReportCommand do
   before { robot.current_location = position }
 
   describe '#execute' do
-    it 'reports current location' do
-      expect(subject.execute).to eq '0,3,NORTH'
-    end 
+    it 'prints report to stdout' do
+      expect{ subject.execute }.to output("0,3,NORTH\n").to_stdout
+    end
   end
 end

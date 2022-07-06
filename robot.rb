@@ -10,7 +10,7 @@ class Robot
   def report_current_location
     if @current_location
       [@current_location.x_position, @current_location.y_position, @current_location.direction].join(',')
-    else 
+    else
       'robot is not placed correctly'
     end
   end

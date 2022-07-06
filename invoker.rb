@@ -15,7 +15,7 @@ class Invoker
       x = command.split(',')[0].split(' ')[1].to_i
       y = command.split(',')[1].to_i
       direction = command.split(',')[2].strip
-  
+
       curent_location = Position.new(x, y, direction)
       PlaceCommand.new(@robot, @table, curent_location)
     elsif command.split.include?('MOVE')

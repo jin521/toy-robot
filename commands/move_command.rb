@@ -1,5 +1,5 @@
 class MoveCommand
-  def initialize(robot=nil, table=nil)
+  def initialize(robot = nil, table = nil)
     @robot = robot
     @table = table
   end

@@ -1,6 +1,5 @@
-
 class RightCommand
-  def initialize(robot=nil)
+  def initialize(robot = nil)
     @robot = robot
   end
 

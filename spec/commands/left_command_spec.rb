@@ -17,9 +17,9 @@ describe LeftCommand do
 
       it 'rotate the robot 90 degree to left' do
         subject.execute
-  
+
         expect(robot.current_location.direction).to eq 'WEST'
-      end 
+      end
     end
 
     context 'robot is initially facing EAST' do
@@ -27,9 +27,9 @@ describe LeftCommand do
 
       it 'rotate the robot 90 degree to left' do
         subject.execute
-  
+
         expect(robot.current_location.direction).to eq 'NORTH'
-      end 
+      end
     end
 
     context 'robot is initially facing SOUTH' do
@@ -37,9 +37,9 @@ describe LeftCommand do
 
       it 'rotate the robot 90 degree to left' do
         subject.execute
-  
+
         expect(robot.current_location.direction).to eq 'EAST'
-      end 
+      end
     end
 
     context 'robot is initially facing WEST' do
@@ -47,10 +47,9 @@ describe LeftCommand do
 
       it 'rotate the robot 90 degree to left' do
         subject.execute
-  
-        expect(robot.current_location.direction).to eq 'SOUTH'
-      end 
-    end
 
+        expect(robot.current_location.direction).to eq 'SOUTH'
+      end
+    end
   end
 end
