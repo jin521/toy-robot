@@ -4,6 +4,6 @@ class ReportCommand
   end
 
   def execute
-    puts @robot.report_current_location
+    @robot.report_current_location
   end
 end

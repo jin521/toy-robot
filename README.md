@@ -70,7 +70,7 @@ REPORT
 Output: `3,3,NORTH`
 
 #### Setup
-- this applicaiton uses Ruby version 2.7.3
+- this applicaiton uses Ruby version 2.7.3, make sure you have the correct version installed
 ```
 rbenv install 2.7.3
 ```
