@@ -1,4 +1,6 @@
 class Table
+  attr_reader :length, :width
+
   MAX_DIMENSION = 5
 
   def initialize(length = MAX_DIMENSION, width = MAX_DIMENSION)

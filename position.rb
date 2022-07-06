@@ -1,7 +1,9 @@
+require 'byebug'
+
 class Position
   attr_reader :x_position, :y_position, :direction
 
-  DIRECTIONS = ['NORTH', 'EAST', 'SOUTH', 'WEST'].freeze
+  DIRECTIONS = %w[NORTH EAST SOUTH WEST].freeze
 
   def initialize(x_position, y_position, direction)
     @x_position = x_position
@@ -10,12 +12,14 @@ class Position
   end
 
   def move(direction)
+    byebug
     case direction
     when 'NORTH'
       move_north
     when 'SOUTH'
       move_south
     when 'WEST'
+      byebug
       move_west
     when 'EAST'
       move_east
@@ -51,6 +55,7 @@ class Position
   end
 
   def move_west
+    byebug
     Position.new(@x_position - 1, @y_position, @direction)
   end
 

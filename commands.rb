@@ -11,7 +11,7 @@ robot = Robot.new
 commander = Commander.new(robot, table)
 
 loop do
-  puts "type your command (one command at a time, enter EXIT to quit the game)"
+  puts 'type your command (one command at a time, enter EXIT to quit the game)'
 
   input = gets.chomp
 
@@ -19,4 +19,3 @@ loop do
 
   break if input =~ /exit/i
 end
-
