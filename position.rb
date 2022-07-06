@@ -43,7 +43,7 @@ class Position
   private
 
   def move_north
-    Posiition.new(@x_position, @y_position + 1, @direction)
+    Position.new(@x_position, @y_position + 1, @direction)
   end
 
   def move_south
