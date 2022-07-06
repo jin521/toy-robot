@@ -1,9 +1,9 @@
-class Postion
+class Position
   attr_reader :x_position, :y_position, :direction
 
   def initialize(x_position, y_position, direction)
     @x_position = x_position
-    @y_postion = y_position
+    @y_position = y_position
     @direction = direction
   end
 

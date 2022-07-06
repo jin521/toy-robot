@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 class Robot
-  attr_accessor :x_position, :y_position, :direction
+  attr_accessor :current_location
 
   def initialize
     @current_location = nil
